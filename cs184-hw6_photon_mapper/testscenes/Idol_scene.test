@@ -1,0 +1,256 @@
+#Cornell Box
+
+output scene6.bmp
+
+size 1920 1200
+
+increment 0.01
+
+camera 0 -1 1   0 0 -2   0 1 0   45
+
+maxthreads 7
+maxdepth 3
+maxinternaldepth 2
+
+numphotons 2000000000
+photonradius 0.01
+photondepth 3
+numdiffuse 1
+
+MSAA 16 4
+
+maxverts 12
+
+#planar face
+vertex -1 +1 0
+vertex -1 -1 0
+vertex +1 -1 0
+vertex +1 +1 0
+
+#cube
+vertex -1 +1 +1
+vertex +1 +1 +1
+vertex -1 -1 +1
+vertex +1 -1 +1
+
+vertex -1 +1 -1
+vertex +1 +1 -1
+vertex -1 -1 -1
+vertex +1 -1 -1
+
+
+ambient 0 0 0
+specular 0 0 0
+shininess 40
+emission 0 0 0
+diffuse 0 0 0
+
+attenuation 1 0.1 0.05
+
+//point 0 -1.41837 -0.409322   1 1 1
+
+//directional 0 1 -1 0.2 0.2 0.2
+
+
+pushTransform
+
+#red
+diffuse 1 0 0
+specular 0.1 0 0
+pushTransform
+translate -1.73205081 0 0
+rotate 0 1 0 60
+scale 2.4 2.4 1
+par 0 1 3
+popTransform
+
+#green
+diffuse 0 1 0
+specular 0 0.1 0
+pushTransform
+translate 1.73205081 0 0
+rotate 0 1 0 -60
+scale 2.4 2.4 1
+par 0 1 3
+popTransform
+
+#back
+diffuse 1 1 1
+specular 0 0 0
+pushTransform
+scale 1.1 1.1 1
+translate 0 0 -2
+par 0 1 3
+popTransform
+
+#top
+diffuse 1 1 1
+specular 0.15 0.15 0.15
+pushTransform
+translate 0 1.943375673 0.5
+rotate 1 0 0 60
+scale 3 3 1
+par 0 1 3
+popTransform
+
+#bottom
+diffuse 1 1 1
+specular 0.1 0.1 0.1
+pushTransform
+translate 0 -1.943375673 0.5
+rotate 1 0 0 -60
+scale 3 3 1
+par 0 1 3
+reclight 1 1 1   -0.01 0.34 0.00001   0.02 0 0   0 0.02 0
+popTransform
+
+
+//reclight 0.075 0.05 0.1   1.485 0.485 0   0 0.03 0   0.03 0 0
+//reclight 0.075 0.05 0.1   -1.515 0.485 0   0 0.03 0   0.03 0 0
+
+
+
+#cube
+diffuse 1 1 1
+specular 0.2 0.2 0.2
+pushTransform
+translate 0 0 -1.5
+scale 0.3 0.3 0.3
+par 4 6 5
+par 4 5 8
+par 7 11 5
+par 4 8 6
+par 6 10 7
+par 10 8 11
+popTransform
+
+#sphere
+diffuse 1 1 1
+specular 0.25 0.25 0.25
+pushTransform
+translate 0 -0.0278 -1.2
+scale 0.07 0.12 0.07
+sphere 0 0 0 1
+popTransform
+
+#cube
+diffuse 0.5 0.5 0.5
+specular 0.2 0.2 0.2
+pushTransform
+translate 0 -0.2 -1.2
+scale 0.2 0.04 0.05
+par 4 6 5
+par 4 5 8
+par 7 11 5
+par 4 8 6
+par 6 10 7
+par 10 8 11
+popTransform
+
+
+index 1.3
+alpha 0
+
+#sphere2.1
+diffuse 1 1 0.1
+specular 0.1 0.1 0.05
+pushTransform
+translate 0.086 -0.563 -0.85
+rotate 1 0 0 52
+scale 0.068 0.068 0.006
+sphere 0 0 0 1
+popTransform
+
+#sphere2.2
+diffuse 1 1 0.1
+specular 0.1 0.1 0.05
+pushTransform
+translate -0.086 -0.563 -0.85
+rotate 1 0 0 52
+scale 0.068 0.068 0.006
+sphere 0 0 0 1
+popTransform
+
+
+#sphere3.1
+diffuse 1 0 0
+specular 0.2 0 0
+pushTransform
+translate 0.3 0.3 -1.3
+rotate 1 0 0 30
+scale 0.15 0.15 0.05
+sphere 0 0 0 1
+popTransform
+
+#sphere3.2
+diffuse 0 1 0
+specular 0 0.2 0
+pushTransform
+translate -0.3 0.3 -1.3
+rotate 1 0 0 30
+scale 0.15 0.15 0.05
+sphere 0 0 0 1
+popTransform
+
+#sphere3.3
+diffuse 0 0 1
+specular 0 0 0.2
+pushTransform
+translate 0 0.4 -1.2
+rotate 1 0 0 45
+scale 0.15 0.15 0.05
+sphere 0 0 0 1
+popTransform
+
+#sphere3.4
+diffuse 1.5 1.5 0
+specular 0.2 0.2 0
+pushTransform
+translate 0.18 0.4 -1.2
+rotate 1 0 0 45
+scale 0.05 0.05 0.02
+sphere 0 0 0 1
+popTransform
+
+#sphere3.5
+diffuse 1.5 1.5 0
+specular 0.2 0.2 0
+pushTransform
+translate -0.18 0.4 -1.2
+rotate 1 0 0 45
+scale 0.05 0.05 0.02
+sphere 0 0 0 1
+popTransform
+
+index 1
+alpha 1
+
+#cube
+diffuse 0.5 0.5 0.5
+specular 0.15 0.15 0.15
+pushTransform
+translate 0 -0.65 -1.775
+scale 0.6 0.25 0.275
+par 4 6 5
+par 4 5 8
+par 7 11 5
+par 4 8 6
+par 6 10 7
+par 10 8 11
+popTransform
+
+#cube
+diffuse 0.4 0.4 0.4
+specular 0.1 0.1 0.1
+pushTransform
+translate 0 -0.9 -1.5
+scale 0.4 0.25 0.2
+par 4 6 5
+par 4 5 8
+par 7 11 5
+par 4 8 6
+par 6 10 7
+par 10 8 11
+popTransform
+
+popTransform
